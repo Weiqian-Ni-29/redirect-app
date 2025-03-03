@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect } from 'react';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  useEffect(() => {
+    // 立即跳转到目标 URL
+    window.location.href = "https://siiinomad.com";
+    
+    // 如果需要延迟跳转（例如 3 秒后跳转），可以这样写：
+    // setTimeout(() => {
+    //   window.location.href = "https://www.example.com";
+    // }, 3000);
+  }, []); // 空依赖数组表示只在组件挂载时执行一次
+
+  // 不渲染任何内容
+  return null;
 }
 
 export default App;
